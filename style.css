@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    min-height: 100vh;
+}
+:root{
+    --soft-red : hsl(10, 79%, 65%);
+    --light-red : hsl(10, 69%, 75%);
+    --cyan: hsl(186, 34%, 60%);
+    --light-cyan: hsl(186, 21%, 72%);
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --pale-oreange: hsl(33, 100%, 98%);
+}
+body{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.bc-card{
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.header-bc-card{
+    background-color: var(--soft-red);
+    border-radius: 0.9rem;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+.info-header{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.title-header{
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+.amount-balance{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.image-header svg{
+    height: 40px;
+}
+.main-card{
+    border-radius: 0.9rem;
+    background-color: #fff;
+    padding: 1.6rem 1.8rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.body-bc-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3.2rem;
+}
+.title-body{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.bar-chart{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.chart-day{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+}
+.amount-day{
+    position: absolute;
+    top: -37px;
+    z-index: 999;
+    font-size: 0.9rem;
+    background-color: var(--dark-brown);
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+    color: #fff;
+    display: none;
+}
+.bar-day{
+    width: 40px;
+    border-radius: 0.2rem;
+    background-color: var(--soft-red);
+}
+.bar-day.isMaxAmount{
+    background-color: var(--cyan);
+}
+.chart-day:hover .bar-day{
+    background-color: var(--light-red);
+}
+.chart-day:hover .bar-day.isMaxAmount{
+    background-color: var(--light-cyan);
+}
+.chart-day:hover .amount-day{
+    display: block;
+}
+.day{
+    color: var(--medium-brown);
+    font-size: 0.8rem;
+}
+
+.horizontal-line{
+    border-bottom: 1px solid var(--cream);
+}
+.footer-bc-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.title-total{
+    font-size: 0.8rem;
+    color: var(--medium-brown);
+}
+.amount-month{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.value-percentage{
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: end;
+}
+.info-percentage{
+    color: var(--medium-brown);
+    font-size: 0.9rem;
+}
+
+@media(max-width:1200px){
+    body{
+        font-size: 16px;
+    }
+    .bc-card{
+        min-width: 350px;
+        gap: 0.8rem;
+    }
+    .header-bc-card{
+        border-radius: 0.9rem;
+        padding: 1rem;
+    }
+    .main-card{
+        border-radius: 0.9rem;
+        padding: 1.3rem 1.5rem 2.5rem;
+        gap: 1.1rem;
+    }
+    .bar-day{
+        width: 35px;
+        border-radius: 0.2rem;
+    }
+}
